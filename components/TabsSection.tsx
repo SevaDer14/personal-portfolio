@@ -32,7 +32,7 @@ const TabsSection: FC<TabsSectionProps> = ({ tabs, ...props }) => {
         </TabList>
         <Tab.Panels>
           {tabs.map((tab) => (
-            <Tab.Panel key={`${tab.placeOfWork}-panel`}>
+            <Tab.Panel key={`${tab.placeOfWork}-panel`} className="mt-8 md:mt-0">
               <h3 className={`${montserrat.className} -ml-0.5 text-4xl`}>
                 {tab.position}
               </h3>

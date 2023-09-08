@@ -5,7 +5,7 @@ import { ComponentPropsWithoutRef, FC } from "react";
 
 const TabList: FC<ComponentPropsWithoutRef<"div">> = (props) => {
   return (
-    <Tab.List>{() => <div className="flex flex-col" {...props} />}</Tab.List>
+    <Tab.List>{() => <div className="flex md:flex-col" {...props} />}</Tab.List>
   );
 };
 

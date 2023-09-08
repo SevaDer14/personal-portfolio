@@ -41,7 +41,7 @@ export default function Home() {
         className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-5xl`}
       >
         <div className="my-auto flex h-full gap-12">
-          <div className="basis-[55%] text-justify text-lg tracking-wider">
+          <div className="lg:basis-[55%] text-justify text-lg tracking-wider">
             <h2 className={`${montserrat.className} text-5xl font-bold`}>
               About me
             </h2>
@@ -69,7 +69,7 @@ export default function Home() {
               src="/about-me.webp"
               alt="seva-photo"
               fill
-              className="border-4 border-primary object-cover object-top shadow-[10px_10px_0_0_#94FBAB66] md:block"
+              className="border-4 border-primary object-cover object-top shadow-[10px_10px_0_0_#94FBAB66]"
             />
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function Home() {
         id="contact"
         className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-3xl py-16`}
       >
-        <div className="m-auto flex max-w-xl flex-col flex-wrap items-center gap-16 sm:flex-row sm:gap-8">
+        <div className="m-auto flex max-w-xl flex-col flex-wrap items-center gap-16 md:flex-row md:gap-8">
           <Avatar
             src="/seva-closeup.webp"
             alt="seva-closeup"
