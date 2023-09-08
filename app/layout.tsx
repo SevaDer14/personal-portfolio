@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import IconLinks from "@/components/IconLinks";
 import Navigation from "@/components/Navigation";
 import { fira_mono, montserrat } from "@/app/fonts";
+import contacts from "@/data/contacts";
 
 export const metadata: Metadata = {
   title: "Seva Deriushkin",
@@ -17,7 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fira_mono.className}>
-        <header className="fixed top-0 flex h-24 w-full items-center justify-center">
+        <header
+          className={`sticky top-0 z-10 flex h-24 w-full 
+        items-center justify-center border-b-[2px] 
+        border-[#a4b0bd] border-opacity-5 bg-gradient-to-l 
+        from-bg-light to-[#1a242e]`}
+        >
           <Navigation
             links={[
               {
@@ -39,24 +45,14 @@ export default function RootLayout({
             ]}
           />
         </header>
-        <main>{children}</main>
-        <footer className="fixed bottom-0 flex h-24 w-full items-center justify-center">
-          <IconLinks
-            links={[
-              {
-                name: "email",
-                href: "#email",
-              },
-              {
-                name: "telegram",
-                href: "#telegram",
-              },
-              {
-                name: "github",
-                href: "#github",
-              },
-            ]}
-          />
+        <main className="container mx-auto px-8">{children}</main>
+        <footer
+          className={`sticky bottom-0 flex h-24 w-full 
+        items-center justify-center border-t-[2px] 
+        border-[#a4b0bd] border-opacity-5 bg-gradient-to-l
+        from-[#1a252f] to-[#141c24]`}
+        >
+          <IconLinks links={contacts}/>
         </footer>
       </body>
     </html>

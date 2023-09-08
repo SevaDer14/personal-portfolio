@@ -12,12 +12,12 @@ const Navigation = ({ links, ...props }: NavigationProps) => {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    
+
     setHash(window.location.hash);
   }, []);
 
   return (
-    <div className="flex gap-8" {...props}>
+    <div className="flex gap-4 sm:gap-8" {...props}>
       {links.map((link) => (
         <NavigationLink
           key={link.href.toString()}
