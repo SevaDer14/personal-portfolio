@@ -3,6 +3,7 @@ import Avatar from "@/components/Avatar";
 import IconLinks from "@/components/IconLinks";
 import TabsSection from "@/components/TabsSection";
 import contacts from "@/data/contacts";
+import experience from "@/data/experience";
 import Image from "next/image";
 
 // TODO: hamburger navigation, consider headless modal for it
@@ -76,14 +77,14 @@ export default function Home() {
 
       <section
         id="experience"
-        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-5xl`}
+        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-3xl`}
       >
-        <div className="my-auto h-full gap-12">
+        <div className="my-auto gap-12">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
             Work experience
           </h2>
 
-          <TabsSection />
+          <TabsSection tabs={experience} className="mt-12" />
         </div>
       </section>
 
