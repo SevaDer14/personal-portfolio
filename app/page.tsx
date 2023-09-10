@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <section
         id="hero"
-        className={`${montserrat.className} relative mx-auto flex min-h-[calc(100vh-192px)] max-w-7xl flex-col justify-center`}
+        className={`${montserrat.className} relative mx-auto flex min-h-[calc(100vh-192px)] max-w-7xl scroll-m-24 flex-col justify-center`}
       >
         <Image
           src="/seva-full.webp"
@@ -33,15 +33,21 @@ export default function Home() {
           <p className="mt-4 text-right text-[min(6vw,50px)] font-extralight uppercase leading-tight drop-shadow-[0_2px_2px_#131B23] md:text-left">
             I build for the <br className="md:hidden" /> web
           </p>
+
+          <IconLinks
+            links={contacts}
+            size={32}
+            className="mt-12 hidden gap-8 md:flex"
+          />
         </div>
       </section>
 
       <section
         id="about"
-        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-5xl`}
+        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-5xl scroll-m-24`}
       >
         <div className="my-auto flex h-full gap-12">
-          <div className="lg:basis-[55%] text-justify text-lg tracking-wider">
+          <div className="text-justify text-lg tracking-wider lg:basis-[55%]">
             <h2 className={`${montserrat.className} text-5xl font-bold`}>
               About me
             </h2>
@@ -77,20 +83,20 @@ export default function Home() {
 
       <section
         id="experience"
-        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-3xl`}
+        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-3xl scroll-m-24`}
       >
         <div className="my-auto gap-12">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
             Work experience
           </h2>
 
-          <TabsSection tabs={experience} className="mt-12" />
+          <TabsSection tabs={experience} className="mt-16" />
         </div>
       </section>
 
       <section
         id="contact"
-        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-3xl py-16`}
+        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-3xl scroll-m-24 py-16`}
       >
         <div className="m-auto flex max-w-xl flex-col flex-wrap items-center gap-16 md:flex-row md:gap-8">
           <Avatar
@@ -105,6 +111,7 @@ export default function Home() {
           </h2>
           <IconLinks
             links={contacts}
+            size={30}
             className="mx-auto flex grow-0 flex-col gap-8"
           />
         </div>

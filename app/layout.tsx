@@ -52,7 +52,7 @@ export default function RootLayout({
         border-[#a4b0bd] border-opacity-5 bg-gradient-to-l
         from-[#1a252f] to-[#141c24]`}
         >
-          <IconLinks links={contacts}/>
+          <IconLinks links={contacts} size={24}/>
         </footer>
       </body>
     </html>

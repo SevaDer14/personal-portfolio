@@ -16,10 +16,18 @@ const config: Config = {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        white: "#FCFCFC",
-        "white-faded": "#979797",
-        primary: "#94FBAB",
-        "primary-faded": "#75B082",
+        white: {
+          light: "#FFFFFF",
+          DEFAULT: "#FCFCFC",
+          dark: "#DADADA",
+        },
+        grey: {
+          DEFAULT: "#979797",
+        },
+        primary: {
+          DEFAULT: "#94FBAB",
+          dark: "#75B082",
+        },
         "bg-light": "#202D3A",
         "bg-dark": "#131B23",
       },

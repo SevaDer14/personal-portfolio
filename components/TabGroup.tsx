@@ -7,7 +7,7 @@ import { ComponentPropsWithoutRef, FC, Fragment } from "react";
 const TabGroup: FC<ComponentPropsWithoutRef<"div">> = (props) => {
   return (
     <Tab.Group vertical as={Fragment}>
-      {() => <div className="md:flex min-h-[400px] flex-row gap-8" {...props} />}
+      {() => <div className="flex min-h-[400px] flex-col md:flex-row gap-8" {...props} />}
     </Tab.Group>
   );
 };

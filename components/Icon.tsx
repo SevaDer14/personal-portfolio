@@ -1,10 +1,15 @@
 import { ComponentPropsWithoutRef } from "react";
 
-export type IconName = "email" | "telegram" | "github" | "arrow-right";
+export type IconName =
+  | "email"
+  | "telegram"
+  | "github"
+  | "arrow-right"
+  | "hamburger";
 
 export type IconProps = ComponentPropsWithoutRef<"svg"> & { name: IconName };
 
-const Icon = ({ name, ...props }: IconProps) => {
+const Icon = ({ name, width = 24, height = 24, ...props }: IconProps) => {
   switch (name) {
     case "email":
       return (
@@ -14,8 +19,8 @@ const Icon = ({ name, ...props }: IconProps) => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          width="24"
-          height="24"
+          width={width}
+          height={height}
           {...props}
         >
           <path
@@ -31,8 +36,8 @@ const Icon = ({ name, ...props }: IconProps) => {
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
           y="0px"
-          width="24"
-          height="24"
+          width={width}
+          height={height}
           viewBox="0 0 50 50"
           {...props}
         >
@@ -45,8 +50,8 @@ const Icon = ({ name, ...props }: IconProps) => {
     case "github":
       return (
         <svg
-          width="24"
-          height="24"
+          width={width}
+          height={height}
           viewBox="0 0 98 96"
           xmlns="http://www.w3.org/2000/svg"
           {...props}
@@ -62,8 +67,8 @@ const Icon = ({ name, ...props }: IconProps) => {
     case "arrow-right":
       return (
         <svg
-          width="22"
-          height="16"
+          width={width}
+          height={height}
           viewBox="0 0 22 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +79,24 @@ const Icon = ({ name, ...props }: IconProps) => {
           />
         </svg>
       );
-
+    case "hamburger":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          width={width}
+          height={height}
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      );
     default:
       return null;
   }

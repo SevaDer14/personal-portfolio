@@ -12,10 +12,10 @@ const StyledTab: FC<Pick<TabsSection, "placeOfWork">> = ({ placeOfWork }) => {
           className={`
               ${
                 selected
-                  ? "max-md:border-b-2 md:border-r-2 border-primary bg-primary bg-opacity-5 text-primary"
-                  : "max-md:border-b-[1px] md:border-r-[1px] border-white-faded bg-transparent text-white-faded hover:border-white hover:text-white"
+                  ? "border-primary bg-primary bg-opacity-5 text-primary max-md:border-b-2 md:border-r-2"
+                  : "border-grey text-grey bg-transparent hover:border-white hover:text-white max-md:border-b-[1px] md:border-r-[1px]"
               }
-              md:w-full whitespace-nowrap px-4 py-2 shadow-none outline-none
+              whitespace-nowrap px-4 py-2 shadow-none outline-none md:w-full
             `}
         >
           {placeOfWork}

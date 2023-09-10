@@ -32,13 +32,11 @@ const TabsSection: FC<TabsSectionProps> = ({ tabs, ...props }) => {
         </TabList>
         <Tab.Panels>
           {tabs.map((tab) => (
-            <Tab.Panel key={`${tab.placeOfWork}-panel`} className="mt-8 md:mt-0">
+            <Tab.Panel key={`${tab.placeOfWork}-panel`}>
               <h3 className={`${montserrat.className} -ml-0.5 text-4xl`}>
                 {tab.position}
               </h3>
-              <p className="mt-2 tracking-widest text-white-faded">
-                {tab.period}
-              </p>
+              <p className="text-grey mt-2 tracking-widest">{tab.period}</p>
               <p className="mt-8 text-justify leading-loose tracking-wide">
                 {tab.description}
               </p>
@@ -47,7 +45,7 @@ const TabsSection: FC<TabsSectionProps> = ({ tabs, ...props }) => {
                   href={tab.href}
                   className="mt-8 flex items-center gap-2 tracking-widest text-primary-faded transition-all duration-200 hover:gap-3 hover:text-primary"
                 >
-                  {tab.placeOfWork} <Icon name="arrow-right" />
+                  {`Visit ${tab.placeOfWork}`} <Icon name="arrow-right" />
                 </Link>
               ) : null}
             </Tab.Panel>
