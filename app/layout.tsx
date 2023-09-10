@@ -4,6 +4,8 @@ import IconLinks from "@/components/IconLinks";
 import Navigation from "@/components/Navigation";
 import { fira_mono, montserrat } from "@/app/fonts";
 import contacts from "@/data/contacts";
+import Link from "next/link";
+import ButtonLink from "@/components/ButtonLink";
 
 export const metadata: Metadata = {
   title: "Seva Deriushkin",
@@ -20,9 +22,9 @@ export default function RootLayout({
       <body className={fira_mono.className}>
         <header
           className={`sticky top-0 z-10 flex h-24 w-full 
-        items-center justify-center border-b-[2px] 
-        border-[#a4b0bd] border-opacity-5 bg-gradient-to-l 
-        from-bg-light to-[#1a242e]`}
+        flex-row-reverse items-center justify-between border-b-[2px] border-[#a4b0bd] border-opacity-5 
+        bg-gradient-to-l from-bg-light to-[#1a242e] 
+        md:flex-row md:justify-center`}
         >
           <Navigation
             links={[
@@ -44,6 +46,7 @@ export default function RootLayout({
               },
             ]}
           />
+          <ButtonLink href="/api/cv">Resume</ButtonLink>
         </header>
         <main className="container mx-auto px-8">{children}</main>
         <footer
@@ -52,7 +55,7 @@ export default function RootLayout({
         border-[#a4b0bd] border-opacity-5 bg-gradient-to-l
         from-[#1a252f] to-[#141c24]`}
         >
-          <IconLinks links={contacts} size={24}/>
+          <IconLinks links={contacts} size={24} />
         </footer>
       </body>
     </html>
