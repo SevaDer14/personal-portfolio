@@ -110,7 +110,7 @@ export default function Home() {
             My work
           </h2>
 
-          <Gallery tabs={work} className="mt-16" />
+          <Gallery items={work} className="mt-16" />
         </div>
       </Section>
 

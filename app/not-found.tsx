@@ -1,5 +1,4 @@
 import { montserrat } from "@/app/fonts";
-import Link from "next/link";
 
 export default function NotFound() {
   return (

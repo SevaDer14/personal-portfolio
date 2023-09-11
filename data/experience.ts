@@ -1,6 +1,6 @@
-import { TabsSection } from "@/components/TabsSection";
+import { Tabs } from "@/components/Tabs";
 
-const experience: TabsSection[] = [
+const experience: Tabs[] = [
   {
     placeOfWork: "Stendahls",
     position: "Front-end Developer",

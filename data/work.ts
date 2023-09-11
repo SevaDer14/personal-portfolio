@@ -1,4 +1,6 @@
-const work = [
+import { GalleryItem } from "@/components/Gallery";
+
+const work: GalleryItem[] = [
   {
     image: "/volvo-penta.webp",
     name: "Volvo Penta",

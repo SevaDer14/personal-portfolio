@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentPropsWithoutRef, Fragment, useEffect, useState } from "react";
+import { ComponentPropsWithoutRef, Fragment, useState } from "react";
 import NavigationLink, { NavigationLinkProps } from "./NavigationLink";
 import Icon from "./Icon";
 import { Dialog, Transition } from "@headlessui/react";

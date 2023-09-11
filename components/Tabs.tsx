@@ -6,7 +6,7 @@ import { ComponentPropsWithoutRef, FC, Fragment } from "react";
 import Icon from "@/components/Icon";
 import { Tab } from "@headlessui/react";
 
-export type TabsSection = {
+export type Tabs = {
   placeOfWork: string;
   position: string;
   period: string;
@@ -14,11 +14,11 @@ export type TabsSection = {
   href?: string;
 };
 
-export type TabsSectionProps = ComponentPropsWithoutRef<"div"> & {
-  tabs: TabsSection[];
+export type TabsProps = ComponentPropsWithoutRef<"div"> & {
+  tabs: Tabs[];
 };
 
-const TabsSection: FC<TabsSectionProps> = ({ tabs, ...props }) => {
+const Tabs: FC<TabsProps> = ({ tabs, ...props }) => {
   return (
     <div {...props}>
       <Tab.Group vertical as={Fragment}>
@@ -76,4 +76,4 @@ const TabsSection: FC<TabsSectionProps> = ({ tabs, ...props }) => {
   );
 };
 
-export default TabsSection;
+export default Tabs;

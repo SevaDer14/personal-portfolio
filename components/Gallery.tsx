@@ -7,7 +7,7 @@ import Icon from "@/components/Icon";
 import { Tab } from "@headlessui/react";
 import Image from "next/image";
 
-export type Gallery = {
+export type GalleryItem = {
   name: string;
   href: string;
   image: string;
@@ -17,17 +17,17 @@ export type Gallery = {
 };
 
 export type GalleryProps = ComponentPropsWithoutRef<"div"> & {
-  tabs: Gallery[];
+  items: GalleryItem[];
 };
 
-const Gallery: FC<GalleryProps> = ({ tabs, ...props }) => {
+const Gallery: FC<GalleryProps> = ({ items, ...props }) => {
   return (
     <div {...props}>
       <Tab.Group>
         {() => (
-          <div className=" w-full flex flex-col-reverse lg:flex-col">
+          <div className=" flex w-full flex-col-reverse lg:flex-col">
             <Tab.Panels>
-              {tabs.map((tab) => (
+              {items.map((tab) => (
                 <Tab.Panel
                   key={`${tab.name}-panel`}
                   className="flex w-full gap-8"
@@ -72,7 +72,7 @@ const Gallery: FC<GalleryProps> = ({ tabs, ...props }) => {
               ))}
             </Tab.Panels>
             <Tab.List className="mb-10 flex gap-2 overflow-x-auto pb-4 lg:mt-10">
-              {tabs.map((tab) => (
+              {items.map((tab) => (
                 <Tab key={tab.name} as={Fragment}>
                   {({ selected }) => (
                     <button
