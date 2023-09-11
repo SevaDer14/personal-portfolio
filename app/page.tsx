@@ -1,3 +1,5 @@
+"use client";
+
 import { montserrat } from "@/app/fonts";
 import Avatar from "@/components/Avatar";
 import IconLinks from "@/components/IconLinks";
@@ -7,51 +9,56 @@ import contacts from "@/data/contacts";
 import work from "@/data/work";
 import experience from "@/data/experience";
 import Image from "next/image";
+import { Transition } from "@headlessui/react";
+import Section from "@/components/Section";
 
-// TODO:
-// animations on scroll
-// section heights
-// content
-// animation open modal
 
 export default function Home() {
   return (
     <>
       <section
         id="hero"
-        className={`${montserrat.className} relative mx-auto flex min-h-[calc(100vh-192px)] max-w-7xl scroll-m-24 flex-col justify-center`}
+        className={`${montserrat.className} relative mx-auto mb-[min(24rem,20vh)] flex min-h-[calc(100vh-192px)] max-w-7xl scroll-m-[25vh] flex-col justify-center`}
       >
         <Image
           src="/seva-full.webp"
           alt="seva-photo"
           fill
-          className="absolute hidden object-cover md:block lg:object-contain lg:object-right"
+          className="absolute hidden object-cover lg:block lg:object-contain lg:object-right"
         />
         <Avatar
           src="/seva-closeup.webp"
           alt="seva-closeup"
-          className="mx-auto w-[min(80vw,40vh)] md:hidden"
+          className="mx-auto w-[min(80vw,40vh)] lg:hidden"
         />
-        <div className="md:absolute md:top-[43%] xl:top-[38%]">
-          <h1 className="mt-4 text-[min(11vw,84px)] font-bold leading-tight drop-shadow-[0_5px_5px_#131B2399]">
-            Seva <br className="lg:hidden" /> Deriushkin
-          </h1>
-          <p className="mt-4 text-right text-[min(6vw,50px)] font-extralight uppercase leading-tight drop-shadow-[0_2px_2px_#131B23] md:text-left">
-            I build for the <br className="md:hidden" /> web
-          </p>
+        <Transition
+          appear={true}
+          show={true}
+          enter="ease-out duration-1000"
+          enterFrom="opacity-0 translate-y-20"
+          enterTo="opacity-100 translate-y-0"
+          leave="ease-in duration-1000"
+          leaveFrom="opacity-100 translate-y-0"
+          leaveTo="opacity-0 translate-y-20"
+        >
+          <div className="lg:absolute lg:top-[43%] xl:top-[38%]">
+            <h1 className="mt-4 text-[min(11vw,84px)] font-bold leading-tight drop-shadow-[0_5px_5px_#131B2399]">
+              Seva <br className="lg:hidden" /> Deriushkin
+            </h1>
+            <p className="mt-4 text-right text-[min(6vw,50px)] font-extralight uppercase leading-tight drop-shadow-[0_2px_2px_#131B23] lg:text-left">
+              I build for the <br className="lg:hidden" /> web
+            </p>
 
-          <IconLinks
-            links={contacts}
-            size={32}
-            className="mt-12 hidden gap-8 md:flex"
-          />
-        </div>
+            <IconLinks
+              links={contacts}
+              size={32}
+              className="mt-12 hidden gap-8 lg:flex"
+            />
+          </div>
+        </Transition>
       </section>
 
-      <section
-        id="about"
-        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-5xl scroll-m-24`}
-      >
+      <Section id="about">
         <div className="my-auto flex h-full gap-12">
           <div className="text-justify text-lg tracking-wider lg:basis-[55%]">
             <h2 className={`${montserrat.className} text-5xl font-bold`}>
@@ -85,12 +92,9 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section
-        id="experience"
-        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-3xl scroll-m-24`}
-      >
+      <Section id="experience" className="max-w-3xl">
         <div className="my-auto gap-12">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
             Work experience
@@ -98,12 +102,9 @@ export default function Home() {
 
           <Tabs tabs={experience} className="mt-16" />
         </div>
-      </section>
+      </Section>
 
-      <section
-        id="work"
-        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-5xl scroll-m-24`}
-      >
+      <Section id="work">
         <div className="my-auto w-full">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
             My work
@@ -111,13 +112,13 @@ export default function Home() {
 
           <Gallery tabs={work} className="mt-16" />
         </div>
-      </section>
+      </Section>
 
-      <section
+      <Section
         id="contact"
-        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-3xl scroll-m-24 py-16`}
+        className="max-w-xl items-center justify-center"
       >
-        <div className="m-auto flex max-w-xl flex-col flex-wrap items-center gap-16 md:flex-row md:gap-8">
+        <div className="flex flex-col flex-wrap items-center gap-16 md:flex-row md:gap-8">
           <Avatar
             src="/seva-closeup.webp"
             alt="seva-closeup"
@@ -134,7 +135,7 @@ export default function Home() {
             className="mx-auto flex grow-0 flex-col gap-8"
           />
         </div>
-      </section>
+      </Section>
     </>
   );
 }

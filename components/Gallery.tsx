@@ -25,14 +25,14 @@ const Gallery: FC<GalleryProps> = ({ tabs, ...props }) => {
     <div {...props}>
       <Tab.Group>
         {() => (
-          <div className="flex flex-col-reverse md:flex-col">
+          <div className=" w-full flex flex-col-reverse lg:flex-col">
             <Tab.Panels>
               {tabs.map((tab) => (
                 <Tab.Panel
                   key={`${tab.name}-panel`}
                   className="flex w-full gap-8"
                 >
-                  <div className="relative hidden aspect-[4/3] basis-1/2 border-[3px] border-grey md:block">
+                  <div className="relative hidden aspect-[4/3] basis-1/2 border-[3px] border-grey lg:block">
                     <Image
                       src={tab.image}
                       alt={tab.name}
@@ -40,7 +40,7 @@ const Gallery: FC<GalleryProps> = ({ tabs, ...props }) => {
                       className="object-cover"
                     />
                   </div>
-                  <div className="basis-full md:basis-1/2">
+                  <div className="basis-full lg:basis-1/2">
                     <h3 className={`${montserrat.className} -ml-0.5 text-4xl`}>
                       {tab.name}
                     </h3>
@@ -71,7 +71,7 @@ const Gallery: FC<GalleryProps> = ({ tabs, ...props }) => {
                 </Tab.Panel>
               ))}
             </Tab.Panels>
-            <Tab.List className="mb-10 flex gap-2 overflow-x-auto pb-4 md:mt-10">
+            <Tab.List className="mb-10 flex gap-2 overflow-x-auto pb-4 lg:mt-10">
               {tabs.map((tab) => (
                 <Tab key={tab.name} as={Fragment}>
                   {({ selected }) => (
