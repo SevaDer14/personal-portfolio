@@ -4,7 +4,6 @@ import IconLinks from "@/components/IconLinks";
 import Navigation from "@/components/Navigation";
 import { fira_mono, montserrat } from "@/app/fonts";
 import contacts from "@/data/contacts";
-import Link from "next/link";
 import ButtonLink from "@/components/ButtonLink";
 
 export const metadata: Metadata = {
@@ -23,7 +22,7 @@ export default function RootLayout({
         <header
           className={`sticky top-0 z-10 flex h-24 w-full 
         flex-row-reverse items-center justify-between border-b-[2px] border-[#a4b0bd] border-opacity-5 
-        bg-gradient-to-l from-bg-light to-[#1a242e] 
+        bg-gradient-to-l from-brand-light to-[#1a242e] 
         md:flex-row md:justify-center`}
         >
           <Navigation
@@ -50,7 +49,7 @@ export default function RootLayout({
         </header>
         <main className="container mx-auto px-8">{children}</main>
         <footer
-          className={`sticky bottom-0 flex h-24 w-full 
+          className={`sticky bottom-0 flex h-24 w-full
         items-center justify-center border-t-[2px] 
         border-[#a4b0bd] border-opacity-5 bg-gradient-to-l
         from-[#1a252f] to-[#141c24]`}

@@ -6,7 +6,7 @@ const Avatar = ({ className, size, alt, ...props }: AvatarProps) => {
   return (
     <div className={`relative aspect-square ${className} `}>
       <Image
-        className="rounded-full border-4 border-white bg-bg-light"
+        className="rounded-full border-4 border-white bg-brand-light"
         fill
         alt={alt}
         {...props}

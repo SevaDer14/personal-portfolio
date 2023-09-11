@@ -28,8 +28,10 @@ const config: Config = {
           DEFAULT: "#94FBAB",
           dark: "#75B082",
         },
-        "bg-light": "#202D3A",
-        "bg-dark": "#131B23",
+        brand: {
+          light: "#202D3A",
+          dark: "#131B23",
+        },
       },
     },
   },

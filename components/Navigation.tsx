@@ -40,9 +40,9 @@ const Navigation = ({ links, ...props }: NavigationProps) => {
         <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
           <div className="fixed inset-0 z-20 bg-black/30" aria-hidden="true" />
 
-          <div className="fixed top-0 right-0 z-20 flex items-start justify-center">
-            <Dialog.Panel className="border-l-grey h-screen w-[min(100vw,300px)] border-l-2 bg-bg-light">
-              <div className="border-b-grey w-full border-b-[1px] border-opacity-10 p-3 h-24 flex justify-end">
+          <div className="fixed right-0 top-0 z-20 flex items-start justify-center">
+            <Dialog.Panel className="h-screen w-[min(100vw,300px)] border-l-2 border-l-grey bg-gradient-to-b from-brand-light to-brand-dark">
+              <div className="flex h-24 w-full justify-end border-b-[1px] border-b-grey border-opacity-10 p-3">
                 <button onClick={() => setIsOpen(false)}>
                   <Icon name="close" width={32} height={32} />
                 </button>
@@ -51,7 +51,7 @@ const Navigation = ({ links, ...props }: NavigationProps) => {
               {links.map((link) => (
                 <div
                   key={link.href.toString()}
-                  className="border-b-grey w-full border-b-[1px] border-opacity-10 p-3 text-right uppercase"
+                  className="w-full border-b-[1px] border-b-grey border-opacity-10 p-3 text-right uppercase"
                 >
                   <Link
                     onClick={() => {

@@ -1,12 +1,18 @@
 import { montserrat } from "@/app/fonts";
 import Avatar from "@/components/Avatar";
 import IconLinks from "@/components/IconLinks";
-import TabsSection from "@/components/TabsSection";
+import Gallery from "@/components/Gallery";
+import Tabs from "@/components/Tabs";
 import contacts from "@/data/contacts";
+import work from "@/data/work";
 import experience from "@/data/experience";
 import Image from "next/image";
 
-// TODO: hamburger navigation, consider headless modal for it
+// TODO:
+// animations on scroll
+// section heights
+// content
+// animation open modal
 
 export default function Home() {
   return (
@@ -90,7 +96,20 @@ export default function Home() {
             Work experience
           </h2>
 
-          <TabsSection tabs={experience} className="mt-16" />
+          <Tabs tabs={experience} className="mt-16" />
+        </div>
+      </section>
+
+      <section
+        id="work"
+        className={`mx-auto flex min-h-[calc(100vh-192px)] max-w-5xl scroll-m-24`}
+      >
+        <div className="my-auto w-full">
+          <h2 className={`${montserrat.className} text-5xl font-bold`}>
+            My work
+          </h2>
+
+          <Gallery tabs={work} className="mt-16" />
         </div>
       </section>
 
@@ -111,7 +130,7 @@ export default function Home() {
           </h2>
           <IconLinks
             links={contacts}
-            size={30}
+            size={32}
             className="mx-auto flex grow-0 flex-col gap-8"
           />
         </div>
