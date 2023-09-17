@@ -59,7 +59,7 @@ export default function Home() {
         </Transition>
       </section>
 
-      <Section id="work" className="max-w-6xl">
+      <Section id="projects" className="max-w-6xl">
         <div className="my-auto w-full">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
             My Projects

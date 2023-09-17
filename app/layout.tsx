@@ -29,7 +29,7 @@ export default function RootLayout({
             links={[
               {
                 label: "projects",
-                href: "/#work",
+                href: "/#projects",
               },
               {
                 label: "experience",
