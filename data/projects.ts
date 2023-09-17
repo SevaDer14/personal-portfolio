@@ -1,6 +1,6 @@
-import { GalleryItem } from "@/components/Gallery";
+import { Project } from "@/components/Projects";
 
-const projects: GalleryItem[] = [
+const projects: Project[] = [
   {
     image: "/volvo-penta.webp",
     name: "Volvo Penta",
