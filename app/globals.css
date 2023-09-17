@@ -31,10 +31,6 @@ body {
   background-attachment: fixed;
 }
 
-* {
-  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.05);
-}
-
 :focus {
   outline: 2px dashed #94FBAB;
   outline-offset: 3px;
@@ -48,6 +44,10 @@ body {
 :focus-visible {
   outline: 2px dashed #94FBAB;
   outline-offset: 3px;
+}
+
+* {
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.05);
 }
 
 *::-webkit-scrollbar {

@@ -35,10 +35,10 @@ const Tabs: FC<TabsProps> = ({ tabs, ...props }) => {
                           className={`
                         ${
                           selected
-                            ? "border-primary bg-primary bg-opacity-5 text-primary max-md:border-b-2 md:border-r-2"
-                            : "border-grey bg-transparent text-grey hover:border-white hover:text-white max-md:border-b-[1px] md:border-r-[1px]"
+                            ? "border-primary text-primary max-md:border-b-4 md:border-r-4"
+                            : "border-grey text-grey hover:border-white hover:text-white max-md:border-b-[1px] md:border-r-[1px]"
                         }
-                        whitespace-nowrap px-4 py-2 shadow-none outline-none md:w-full
+                        whitespace-nowrap bg-transparent px-4 py-2 focus:bg-primary focus:bg-opacity-5 focus:outline-none md:w-full
                       `}
                         >
                           {tab.placeOfWork}
@@ -54,10 +54,11 @@ const Tabs: FC<TabsProps> = ({ tabs, ...props }) => {
                 <Tab.Panel key={`${tab.placeOfWork}-panel`}>
                   <h3 className={`${montserrat.className} -ml-0.5 text-4xl`}>
                     {tab.position}{" "}
-                    <a
+                    <Link
                       href={tab.href}
+                      target="_blank"
                       className="text-primary"
-                    >{` @${tab.placeOfWork}`}</a>
+                    >{` @${tab.placeOfWork}`}</Link>
                   </h3>
                   <p className="mt-2 tracking-widest text-grey">{tab.period}</p>
 

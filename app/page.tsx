@@ -13,6 +13,7 @@ import { Transition } from "@headlessui/react";
 import Section from "@/components/Section";
 import { Fragment } from "react";
 
+
 export default function Home() {
   return (
     <>
@@ -59,7 +60,7 @@ export default function Home() {
         </Transition>
       </section>
 
-      <Section id="projects" className="max-w-6xl">
+      <Section id="projects" className="max-w-6xl min-h-[1800px]">
         <div className="my-auto w-full">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
             My Projects
@@ -69,7 +70,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="experience" className="max-w-[90ch]">
+      <Section id="experience" className="max-w-[90ch] min-h-[850px]">
         <div className="my-auto gap-12">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
             Work experience
@@ -79,7 +80,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="about" className="max-w-2xl xl:max-w-5xl">
+      <Section id="about" className="max-w-2xl xl:max-w-5xl min-h-[750px]">
         <div className="my-auto flex h-full gap-12">
           <div className="text-justify text-lg tracking-wider xl:basis-[55%]">
             <h2 className={`${montserrat.className} text-5xl font-bold`}>

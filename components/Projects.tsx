@@ -26,8 +26,9 @@ const Gallery: FC<GalleryProps> = ({ projects, ...props }) => {
             key={`${project.name}-panel`}
             className="flex w-full flex-col-reverse gap-8 md:px-16 xl:flex-row xl:p-0 xl:even:flex-row-reverse"
           >
-            <a
+            <Link
               href={project.href}
+              target="_blank"
               className="relative mt-8 block aspect-[4/3] basis-1/2 border-[3px] border-grey transition-colors hover:border-primary xl:mt-0"
             >
               <Image
@@ -44,17 +45,18 @@ const Gallery: FC<GalleryProps> = ({ projects, ...props }) => {
                   {`visit ${project.href.substring(8)}`}
                 </p>
               </div>
-            </a>
+            </Link>
             <div className="basis-full lg:basis-1/2">
-              <a
+              <Link
                 href={project.href}
+                target="_blank"
                 className={`${montserrat.className} -ml-0.5 w-fit text-4xl transition-colors hover:text-primary`}
               >
                 {project.name}
                 <span className="ml-2 inline-block">
                   <Icon name="external-link" />
                 </span>
-              </a>
+              </Link>
               <div className="mt-2 flex flex-wrap gap-x-8">
                 {project.tech.map((tech) => (
                   <span key={tech} className="mt-2 tracking-widest text-grey">
@@ -70,6 +72,7 @@ const Gallery: FC<GalleryProps> = ({ projects, ...props }) => {
                   <Link
                     key={link.href}
                     href={link.href}
+                    target="_blank"
                     className="mt-8 flex items-center gap-2 tracking-widest text-primary-dark transition-all duration-200 hover:gap-3 hover:text-primary"
                   >
                     {link.label} <Icon name="arrow-right" />
