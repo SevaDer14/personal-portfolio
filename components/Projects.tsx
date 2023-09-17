@@ -24,7 +24,7 @@ const Gallery: FC<GalleryProps> = ({ projects, ...props }) => {
         {projects.map((project) => (
           <div
             key={`${project.name}-panel`}
-            className="flex w-full flex-col-reverse gap-8 px-16 xl:flex-row xl:p-0 xl:even:flex-row-reverse"
+            className="flex w-full flex-col-reverse gap-8 md:px-16 xl:flex-row xl:p-0 xl:even:flex-row-reverse"
           >
             <a
               href={project.href}
