@@ -15,7 +15,7 @@ const projects: GalleryItem[] = [
     tech: ["React", "TypeScript", "Redux Toolkit", "SASS", "Storybook"],
     description:
       "Lead role in overseeing the React front-end codebase for the Husqvarna Construction's e-commerce website. This includes ensuring code quality, performance and stability of the solution. Maintaining documentation of the front-end components in Storybook. As well as closely collaborating with the client to jointly prioritize, design, and execute the development of new features.",
-    href: "https://www.husqvarnaconstruction.com/int/",
+    href: "https://husqvarnaconstruction.com",
   },
   {
     image: "/new-tonality.webp",

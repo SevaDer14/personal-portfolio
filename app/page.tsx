@@ -3,7 +3,7 @@
 import { montserrat } from "@/app/fonts";
 import Avatar from "@/components/Avatar";
 import IconLinks from "@/components/IconLinks";
-import Gallery from "@/components/Gallery";
+import Projects from "@/components/Projects";
 import Tabs from "@/components/Tabs";
 import contacts from "@/data/contacts";
 import projects from "@/data/projects";
@@ -24,7 +24,7 @@ export default function Home() {
           src="/seva-full.webp"
           alt="seva-photo"
           fill
-          className="absolute hidden object-cover lg:block lg:object-contain lg:object-right"
+          className="absolute hidden object-cover object-left lg:block xl:object-contain xl:object-right"
         />
         <Avatar
           src="/seva-closeup.webp"
@@ -59,17 +59,17 @@ export default function Home() {
         </Transition>
       </section>
 
-      <Section id="work">
+      <Section id="work" className="max-w-6xl">
         <div className="my-auto w-full">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
-            Projects
+            My Projects
           </h2>
 
-          <Gallery items={projects} className="mt-16" />
+          <Projects projects={projects} className="mt-32" />
         </div>
       </Section>
 
-      <Section id="experience" className="max-w-3xl">
+      <Section id="experience" className="max-w-[90ch]">
         <div className="my-auto gap-12">
           <h2 className={`${montserrat.className} text-5xl font-bold`}>
             Work experience
@@ -79,9 +79,9 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="about">
+      <Section id="about" className="max-w-2xl xl:max-w-5xl">
         <div className="my-auto flex h-full gap-12">
-          <div className="text-justify text-lg tracking-wider lg:basis-[55%]">
+          <div className="text-justify text-lg tracking-wider xl:basis-[55%]">
             <h2 className={`${montserrat.className} text-5xl font-bold`}>
               About me
             </h2>
@@ -112,7 +112,7 @@ export default function Home() {
               <li>Cypress</li>
             </ul>
           </div>
-          <div className="relative hidden basis-[45%] lg:block">
+          <div className="relative hidden basis-[45%] xl:block">
             <Image
               src="/about-me.webp"
               alt="seva-photo"
