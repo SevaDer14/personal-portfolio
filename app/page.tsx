@@ -101,7 +101,7 @@ export default function Home() {
               cutting-edge web technologies. Here&apos;s a glimpse into some of
               the tech I&apos;ve been working with lately:
             </p>
-            <ul className="mt-8 list-disc columns-[180px] pl-4 text-primary">
+            <ul className="mt-8 list-disc columns-[220px] pl-4 text-primary">
               <li>TypeScript</li>
               <li>Next.js 13 (React)</li>
               <li>Vue 3</li>
