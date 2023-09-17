@@ -11,7 +11,8 @@ export type Tabs = {
   position: string;
   period: string;
   description: string;
-  href?: string;
+  responsibilities: { title: string; description: string }[];
+  href: string;
 };
 
 export type TabsProps = ComponentPropsWithoutRef<"div"> & {
@@ -52,20 +53,21 @@ const Tabs: FC<TabsProps> = ({ tabs, ...props }) => {
               {tabs.map((tab) => (
                 <Tab.Panel key={`${tab.placeOfWork}-panel`}>
                   <h3 className={`${montserrat.className} -ml-0.5 text-4xl`}>
-                    {tab.position}
+                    {tab.position} <a href={tab.href} className="text-primary">{` @${tab.placeOfWork}`}</a>
                   </h3>
                   <p className="mt-2 tracking-widest text-grey">{tab.period}</p>
-                  <p className="mt-8 text-justify leading-loose tracking-wide">
+                  <p className="mt-8 whitespace-pre-line text-justify leading-loose tracking-wide">
                     {tab.description}
                   </p>
-                  {tab.href ? (
-                    <Link
-                      href={tab.href}
-                      className="mt-8 flex items-center gap-2 tracking-widest text-grey transition-all duration-200 hover:gap-3 hover:text-primary"
-                    >
-                      {`Visit ${tab.placeOfWork}`} <Icon name="arrow-right" />
-                    </Link>
-                  ) : null}
+                  <ul className="list-disc tracking-wide leading-loose">
+                    {tab.responsibilities.map((responsibility) => (
+                      <li key={responsibility.title} className="mt-4">
+                        <span className="font-bold tracking-wide text-primary">{`${responsibility.title}: `}</span>
+                        {responsibility.description}
+                      </li>
+                    ))}
+                  </ul>
+
                 </Tab.Panel>
               ))}
             </Tab.Panels>

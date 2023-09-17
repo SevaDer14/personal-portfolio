@@ -28,16 +28,16 @@ export default function RootLayout({
           <Navigation
             links={[
               {
-                label: "about",
-                href: "/#about",
+                label: "projects",
+                href: "/#work",
               },
               {
                 label: "experience",
                 href: "/#experience",
               },
               {
-                label: "work",
-                href: "/#work",
+                label: "about me",
+                href: "/#about",
               },
               {
                 label: "contact",

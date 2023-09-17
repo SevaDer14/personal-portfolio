@@ -6,19 +6,19 @@ import IconLinks from "@/components/IconLinks";
 import Gallery from "@/components/Gallery";
 import Tabs from "@/components/Tabs";
 import contacts from "@/data/contacts";
-import work from "@/data/work";
-import experience from "@/data/experience";
+import projects from "@/data/projects";
+import jobs from "@/data/jobs";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
 import Section from "@/components/Section";
-
+import { Fragment } from "react";
 
 export default function Home() {
   return (
     <>
       <section
         id="hero"
-        className={`${montserrat.className} relative mx-auto mb-[min(24rem,20vh)] flex min-h-[calc(100vh-192px)] max-w-7xl scroll-m-[25vh] flex-col justify-center`}
+        className={`${montserrat.className} max-w-9xl relative mx-auto mb-[min(24rem,20vh)] flex min-h-[calc(100vh-192px)] scroll-m-[25vh] flex-col justify-center`}
       >
         <Image
           src="/seva-full.webp"
@@ -40,6 +40,7 @@ export default function Home() {
           leave="ease-in duration-1000"
           leaveFrom="opacity-100 translate-y-0"
           leaveTo="opacity-0 translate-y-20"
+          as={Fragment}
         >
           <div className="lg:absolute lg:top-[43%] xl:top-[38%]">
             <h1 className="mt-4 text-[min(11vw,84px)] font-bold leading-tight drop-shadow-[0_5px_5px_#131B2399]">
@@ -58,29 +59,57 @@ export default function Home() {
         </Transition>
       </section>
 
+      <Section id="work">
+        <div className="my-auto w-full">
+          <h2 className={`${montserrat.className} text-5xl font-bold`}>
+            Projects
+          </h2>
+
+          <Gallery items={projects} className="mt-16" />
+        </div>
+      </Section>
+
+      <Section id="experience" className="max-w-3xl">
+        <div className="my-auto gap-12">
+          <h2 className={`${montserrat.className} text-5xl font-bold`}>
+            Work experience
+          </h2>
+
+          <Tabs tabs={jobs} className="mt-16" />
+        </div>
+      </Section>
+
       <Section id="about">
         <div className="my-auto flex h-full gap-12">
           <div className="text-justify text-lg tracking-wider lg:basis-[55%]">
             <h2 className={`${montserrat.className} text-5xl font-bold`}>
               About me
             </h2>
-            <p className="mt-12 leading-loose">
-              Hello! My name is Seva and I enjoy creating things that live on
-              the internet. My journey in web development started in 2020 when I
-              decided to switch from doing experimental physics.
+            <p className="mt-8 leading-loose">
+              Hi! I am Seva Deriushkin, an enthusiastic web developer crafting
+              great looking web apps with the exceptional user experience.
             </p>
             <p className="mt-8 leading-loose">
-              Today, I am working at one of top ad agencies in the world
-              building front-end for a variety of clients. Here are a few
-              technologies I&aposve been working with recently:
+              My journey into web development sprouted from the exciting world
+              of experimental physics. As captivating as it was, the dynamic
+              allure of web development pulled me in.
+            </p>
+            <p className="mt-8 leading-loose">
+              Today, I am fortunate to be part of one of the best agencies in
+              the industry, where I work as a front-end developer. Here, I bring
+              ideas to life, fashioning interactive, user-friendly web apps with
+              cutting-edge web technologies. Here&apos;s a glimpse into some of
+              the tech I&apos;ve been working with lately:
             </p>
             <ul className="mt-8 list-disc columns-[180px] pl-4 text-primary">
               <li>TypeScript</li>
-              <li>React (Next.js)</li>
+              <li>Next.js 13 (React)</li>
               <li>Vue 3</li>
+              <li>SvelteKit</li>
               <li>Tailwind</li>
               <li>Storybook</li>
               <li>Figma</li>
+              <li>Cypress</li>
             </ul>
           </div>
           <div className="relative hidden basis-[45%] lg:block">
@@ -94,30 +123,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="experience" className="max-w-3xl">
-        <div className="my-auto gap-12">
-          <h2 className={`${montserrat.className} text-5xl font-bold`}>
-            Work experience
-          </h2>
-
-          <Tabs tabs={experience} className="mt-16" />
-        </div>
-      </Section>
-
-      <Section id="work">
-        <div className="my-auto w-full">
-          <h2 className={`${montserrat.className} text-5xl font-bold`}>
-            My work
-          </h2>
-
-          <Gallery items={work} className="mt-16" />
-        </div>
-      </Section>
-
-      <Section
-        id="contact"
-        className="max-w-xl items-center justify-center"
-      >
+      <Section id="contact" className="max-w-xl items-center justify-center">
         <div className="flex flex-col flex-wrap items-center gap-16 md:flex-row md:gap-8">
           <Avatar
             src="/seva-closeup.webp"
