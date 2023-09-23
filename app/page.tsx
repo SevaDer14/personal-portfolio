@@ -22,8 +22,9 @@ export default function Home() {
         className={`${montserrat.className} max-w-9xl relative mx-auto mb-[min(24rem,20vh)] flex min-h-[calc(100vh-192px)] scroll-m-[25vh] flex-col justify-center`}
       >
         <Image
-          src="/seva-full.webp"
+          src="/seva-main.webp"
           alt="seva-photo"
+          priority={true}
           fill
           className="absolute hidden object-cover object-left lg:block xl:object-contain xl:object-right"
         />
@@ -117,6 +118,7 @@ export default function Home() {
             <Image
               src="/about-me.webp"
               alt="seva-photo"
+              priority={true}
               fill
               className="border-4 border-primary object-cover object-top shadow-[10px_10px_0_0_#94FBAB66]"
             />

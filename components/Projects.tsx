@@ -32,6 +32,7 @@ const Gallery: FC<GalleryProps> = ({ projects, ...props }) => {
               className="relative mt-8 block aspect-[4/3] basis-1/2 border-[3px] border-grey transition-colors hover:border-primary xl:mt-0"
             >
               <Image
+                priority={true}
                 src={project.image}
                 alt={project.name}
                 fill
