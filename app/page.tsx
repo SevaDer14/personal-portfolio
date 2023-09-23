@@ -26,8 +26,8 @@ export default function Home() {
           className="absolute hidden object-cover object-left lg:block xl:object-contain xl:object-right"
         />
         <Avatar
-          src="/seva-closeup.webp"
-          alt="seva-closeup"
+          src="/seva-avatar-large.webp"
+          alt="seva-avatar"
           className="mx-auto w-[min(80vw,40vh)] lg:hidden"
         />
         <Greeting />
@@ -101,8 +101,8 @@ export default function Home() {
       <Section id="contact" className="max-w-xl items-center justify-center">
         <div className="flex flex-col flex-wrap items-center gap-16 md:flex-row md:gap-8">
           <Avatar
-            src="/seva-closeup.webp"
-            alt="seva-closeup"
+            src="/seva-avatar-small.webp"
+            alt="seva-avatar"
             className="w-48 grow-0"
           />
           <h2

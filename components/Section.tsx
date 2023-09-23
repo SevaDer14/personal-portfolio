@@ -17,7 +17,6 @@ const Section = ({ id, children, className, ...props }: SectionProps) => {
     show.current = true;
   }
 
-
   return (
     <section
       id={id}
@@ -29,7 +28,7 @@ const Section = ({ id, children, className, ...props }: SectionProps) => {
         show={isVisible || show.current}
         beforeEnter={alwaysShowSection}
         unmount={false}
-        className="w-full"
+        className="hidden w-full lg:block"
         enter="transition ease-in-out duration-1000"
         enterFrom="opacity-0 translate-y-20"
         enterTo="opacity-100 translate-y-0"
@@ -39,6 +38,8 @@ const Section = ({ id, children, className, ...props }: SectionProps) => {
       >
         {children}
       </Transition>
+
+      <div className="lg:hidden">{children}</div>
     </section>
   );
 };
