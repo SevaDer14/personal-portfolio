@@ -33,7 +33,7 @@ export default function RootLayout({
         </header>
         <main className="container mx-auto px-8">{children}</main>
         <footer
-          className={`sticky bottom-0 flex h-24 w-full
+          className={`flex fixed bottom-0 left-0 h-24 w-full
         items-center justify-center border-t-[2px] 
         border-[#a4b0bd] border-opacity-5 bg-gradient-to-l
         from-[#1a252f] to-[#141c24]`}
