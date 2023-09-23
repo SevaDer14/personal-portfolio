@@ -29,7 +29,7 @@ export default function RootLayout({
           <Navigation
             links={navigation}
           />
-          <ButtonLink href="/api/cv">Resume</ButtonLink>
+          <ButtonLink className="ml-8" href="/api/cv">Resume</ButtonLink>
         </header>
         <main className="container mx-auto px-8">{children}</main>
         <footer
