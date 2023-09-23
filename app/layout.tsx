@@ -2,9 +2,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import IconLinks from "@/components/IconLinks";
 import Navigation from "@/components/Navigation";
-import { fira_mono, montserrat } from "@/app/fonts";
+import { fira_mono } from "@/app/fonts";
 import contacts from "@/data/contacts";
 import ButtonLink from "@/components/ButtonLink";
+import navigation from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "Seva Deriushkin",
@@ -26,24 +27,7 @@ export default function RootLayout({
         md:flex-row md:justify-center`}
         >
           <Navigation
-            links={[
-              {
-                label: "projects",
-                href: "/#projects",
-              },
-              {
-                label: "experience",
-                href: "/#experience",
-              },
-              {
-                label: "about me",
-                href: "/#about",
-              },
-              {
-                label: "contact",
-                href: "/#contact",
-              },
-            ]}
+            links={navigation}
           />
           <ButtonLink href="/api/cv">Resume</ButtonLink>
         </header>

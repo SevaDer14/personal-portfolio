@@ -1,4 +1,4 @@
-"useClient";
+"use client";
 
 import useIsVisible from "@/hooks/useIsVisible";
 import { Transition } from "@headlessui/react";

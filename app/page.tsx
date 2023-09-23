@@ -1,5 +1,3 @@
-"use client";
-
 import { montserrat } from "@/app/fonts";
 import Avatar from "@/components/Avatar";
 import IconLinks from "@/components/IconLinks";
@@ -9,9 +7,8 @@ import contacts from "@/data/contacts";
 import projects from "@/data/projects";
 import jobs from "@/data/jobs";
 import Image from "next/image";
-import { Transition } from "@headlessui/react";
 import Section from "@/components/Section";
-import { Fragment } from "react";
+import Greeting from "@/components/Greeting";
 
 
 export default function Home() {
@@ -33,32 +30,7 @@ export default function Home() {
           alt="seva-closeup"
           className="mx-auto w-[min(80vw,40vh)] lg:hidden"
         />
-        <Transition
-          appear={true}
-          show={true}
-          enter="ease-out duration-1000"
-          enterFrom="opacity-0 translate-y-20"
-          enterTo="opacity-100 translate-y-0"
-          leave="ease-in duration-1000"
-          leaveFrom="opacity-100 translate-y-0"
-          leaveTo="opacity-0 translate-y-20"
-          as={Fragment}
-        >
-          <div className="lg:absolute lg:top-[43%] xl:top-[38%]">
-            <h1 className="mt-4 text-[min(11vw,84px)] font-bold leading-tight drop-shadow-[0_5px_5px_#131B2399]">
-              Seva <br className="lg:hidden" /> Deriushkin
-            </h1>
-            <p className="mt-4 text-right text-[min(6vw,50px)] font-extralight uppercase leading-tight drop-shadow-[0_2px_2px_#131B23] lg:text-left">
-              I build for the <br className="lg:hidden" /> web
-            </p>
-
-            <IconLinks
-              links={contacts}
-              size={32}
-              className="mt-12 hidden gap-8 lg:flex"
-            />
-          </div>
-        </Transition>
+        <Greeting />
       </section>
 
       <Section id="projects" className="max-w-6xl min-h-[1800px]">
